@@ -1,0 +1,72 @@
+box(1..n).
+
+#program always.
+
+%no es su stack hay que desapilar
+needunstack(box(X)) :- in(S, box(X)), _fin(S2, box(X)), not over(floor, box(X)), S != S2.
+
+%Los de abajo no están en su stack, hay que desapilar
+needunstack(box(Y)) :- over(box(X), box(Y)), needunstack(box(X)), not over(box(Y), free), not needmove(box(Y)).
+
+%no esta sobre la caja correcta hay que mover
+needmove(box(Y)) :- over(X, box(Y)), _fover(X1, box(Y)), X != X1.
+
+%si hay debajo alguno que mover hay que desapilar
+needunstack(box(Y)) :- over(box(X), box(Y)), needmove(box(X)).
+
+%si necesitamos mover X, Y es la base final de X, X e Y están libres y no hay que desapilar en Y, mueve X sobre Y si no X al suelo
+can_move(box(X), floor) :- needunstack(box(X)),  over(box(X),free).
+can_move(box(X), floor) :- needmove(box(X)),  over(box(X),free),  _fin(S, box(X)), in(S,box(X)), not over(floor, box(X)).
+can_move(box(X), box(Y)) :- needmove(box(X)), not needunstack(box(Y)), over(box(X),free), over(box(Y),free), _fover(box(Y), box(X)), _fin(S, box(Y)), in(S,box(Y)).
+
+showld_move_floor(box(X)) :- can_move(box(X), floor), 0{can_move(box(X), floor): can_move(box(X), floor), can_move(box(X1), floor), prioridad(N, box(X)), prioridad(N1, box(X1)), N>N1}0.
+showld_move(box(X), box(Y)) :- can_move(box(X), box(Y)).
+showld_move(box(X), floor) :- not can_move(box(_), box(_)), can_move(box(X), floor), 0{can_move(box(X), floor): showld_move_floor(box(X)), showld_move_floor(box(X1)), X1>X}0.
+
+#program dynamic.
+
+%Propagar prioridad mas baja 
+
+prioridad(N,box(Y)):- over(box(X), box(Y)), needmove(box(X)), _prioridad(N1, box(Y)), _prioridad(N, box(X)), N1<N.
+
+1{move(box(X), Y): 'showld_move(box(X),Y)}1.
+
+%Effects
+m(X,0) :- move(box(X), floor).
+m(X,Y) :- move(box(X),box(Y)).
+
+mm(X,X) :- move(box(X), floor).
+mm(X,S) :- move(box(X),Y), in(S,Y).
+
+moved(X) :- move(X,Y).
+covered(Y) :- move(X,Y).
+
+%Actualizamos el stack en el que esta la caja
+in(S,box(X)) :- mm(X,S).
+not in(S1,X) :- in(S,X), 'in(S1,X), S!=S1.
+
+%Actualizamos la posicion sobre la que esta la caja
+over(X,Y) :-  move(Y,X).
+over(floor,Y) :-  move(Y,floor).
+
+%Inhertia
+over(X,box(Y)) :- 'over(X,box(Y)), not moved(box(Y)).
+over(X,free) :- 'over(X,free), not covered(X).
+in(S,X) :- 'in(S,X), not moved(X).
+
+% floor always free
+over(floor, free).
+
+%Not self movement
+:- 'over(X,Y), move(Y,X).
+
+%Control positions
+over(X,free) :- moved(Y), 'over(X,Y).
+
+#program initial. 
+over(box(X),free) :- box(X), not over(box(X), box(_)).
+
+#show m/2.
+%#show can_move/2.
+%#show prioridad/2.
+%#show showld_move/2.

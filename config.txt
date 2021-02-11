@@ -1,0 +1,258 @@
+#const n=50. 
+#program initial. 
+over(floor, free). 
+over(floor,box(40)).
+in(40,box(40)).
+over(box(40), box(44)).
+in(40,box(44)).
+over(box(44), box(3)).
+in(40,box(3)).
+over(box(3), box(7)).
+in(40,box(7)).
+over(box(7), box(49)).
+in(40,box(49)).
+over(box(49), box(27)).
+in(40,box(27)).
+over(box(27), box(43)).
+in(40,box(43)).
+over(box(43), box(1)).
+in(40,box(1)).
+over(box(1), box(25)).
+in(40,box(25)).
+over(box(25), box(6)).
+in(40,box(6)).
+over(box(6), box(23)).
+in(40,box(23)).
+over(box(23), box(48)).
+in(40,box(48)).
+over(box(48), box(24)).
+in(40,box(24)).
+over(box(24), box(10)).
+in(40,box(10)).
+over(box(10), box(20)).
+in(40,box(20)).
+over(box(20), box(17)).
+in(40,box(17)).
+over(box(17), box(13)).
+in(40,box(13)).
+over(box(13), box(31)).
+in(40,box(31)).
+over(box(31), box(32)).
+in(40,box(32)).
+over(box(32), box(5)).
+in(40,box(5)).
+over(box(5), box(45)).
+in(40,box(45)).
+over(box(45), box(47)).
+in(40,box(47)).
+over(box(47), box(21)).
+in(40,box(21)).
+over(box(21), box(37)).
+in(40,box(37)).
+over(box(37), box(46)).
+in(40,box(46)).
+over(box(46), box(36)).
+in(40,box(36)).
+over(box(36), box(15)).
+in(40,box(15)).
+over(box(15), box(50)).
+in(40,box(50)).
+over(floor,box(38)).
+in(38,box(38)).
+over(box(38), box(8)).
+in(38,box(8)).
+over(box(8), box(2)).
+in(38,box(2)).
+over(box(2), box(34)).
+in(38,box(34)).
+over(box(34), box(42)).
+in(38,box(42)).
+over(box(42), box(29)).
+in(38,box(29)).
+over(box(29), box(16)).
+in(38,box(16)).
+over(floor,box(22)).
+in(22,box(22)).
+over(box(22), box(39)).
+in(22,box(39)).
+over(box(39), box(28)).
+in(22,box(28)).
+over(box(28), box(33)).
+in(22,box(33)).
+over(box(33), box(26)).
+in(22,box(26)).
+over(box(26), box(19)).
+in(22,box(19)).
+over(box(19), box(35)).
+in(22,box(35)).
+over(box(35), box(18)).
+in(22,box(18)).
+over(box(18), box(14)).
+in(22,box(14)).
+over(box(14), box(30)).
+in(22,box(30)).
+over(box(30), box(41)).
+in(22,box(41)).
+over(box(41), box(4)).
+in(22,box(4)).
+over(box(4), box(9)).
+in(22,box(9)).
+over(box(9), box(11)).
+in(22,box(11)).
+over(box(11), box(12)).
+in(22,box(12)).
+
+fover(floor,box(1)).
+fin(1,box(1)).
+prioridad(0,box(1)).
+fover(box(1), box(2)).
+fin(1,box(2)).
+prioridad(1,box(2)).
+fover(box(2), box(3)).
+fin(1,box(3)).
+prioridad(2,box(3)).
+fover(box(3), box(4)).
+fin(1,box(4)).
+prioridad(3,box(4)).
+fover(box(4), box(5)).
+fin(1,box(5)).
+prioridad(4,box(5)).
+fover(box(5), box(6)).
+fin(1,box(6)).
+prioridad(5,box(6)).
+fover(box(6), box(7)).
+fin(1,box(7)).
+prioridad(6,box(7)).
+fover(box(7), box(8)).
+fin(1,box(8)).
+prioridad(7,box(8)).
+fover(box(8), box(9)).
+fin(1,box(9)).
+prioridad(8,box(9)).
+fover(box(9), box(10)).
+fin(1,box(10)).
+prioridad(9,box(10)).
+fover(box(10), box(11)).
+fin(1,box(11)).
+prioridad(10,box(11)).
+fover(box(11), box(12)).
+fin(1,box(12)).
+prioridad(11,box(12)).
+fover(box(12), box(13)).
+fin(1,box(13)).
+prioridad(12,box(13)).
+fover(box(13), box(14)).
+fin(1,box(14)).
+prioridad(13,box(14)).
+fover(box(14), box(15)).
+fin(1,box(15)).
+prioridad(14,box(15)).
+fover(box(15), box(16)).
+fin(1,box(16)).
+prioridad(15,box(16)).
+fover(box(16), box(17)).
+fin(1,box(17)).
+prioridad(16,box(17)).
+fover(box(17), box(18)).
+fin(1,box(18)).
+prioridad(17,box(18)).
+fover(box(18), box(19)).
+fin(1,box(19)).
+prioridad(18,box(19)).
+fover(box(19), box(20)).
+fin(1,box(20)).
+prioridad(19,box(20)).
+fover(box(20), box(21)).
+fin(1,box(21)).
+prioridad(20,box(21)).
+fover(box(21), box(22)).
+fin(1,box(22)).
+prioridad(21,box(22)).
+fover(box(22), box(23)).
+fin(1,box(23)).
+prioridad(22,box(23)).
+fover(box(23), box(24)).
+fin(1,box(24)).
+prioridad(23,box(24)).
+fover(box(24), box(25)).
+fin(1,box(25)).
+prioridad(24,box(25)).
+fover(box(25), box(26)).
+fin(1,box(26)).
+prioridad(25,box(26)).
+fover(box(26), box(27)).
+fin(1,box(27)).
+prioridad(26,box(27)).
+fover(box(27), box(28)).
+fin(1,box(28)).
+prioridad(27,box(28)).
+fover(box(28), box(29)).
+fin(1,box(29)).
+prioridad(28,box(29)).
+fover(box(29), box(30)).
+fin(1,box(30)).
+prioridad(29,box(30)).
+fover(box(30), box(31)).
+fin(1,box(31)).
+prioridad(30,box(31)).
+fover(box(31), box(32)).
+fin(1,box(32)).
+prioridad(31,box(32)).
+fover(box(32), box(33)).
+fin(1,box(33)).
+prioridad(32,box(33)).
+fover(box(33), box(34)).
+fin(1,box(34)).
+prioridad(33,box(34)).
+fover(box(34), box(35)).
+fin(1,box(35)).
+prioridad(34,box(35)).
+fover(box(35), box(36)).
+fin(1,box(36)).
+prioridad(35,box(36)).
+fover(box(36), box(37)).
+fin(1,box(37)).
+prioridad(36,box(37)).
+fover(box(37), box(38)).
+fin(1,box(38)).
+prioridad(37,box(38)).
+fover(box(38), box(39)).
+fin(1,box(39)).
+prioridad(38,box(39)).
+fover(box(39), box(40)).
+fin(1,box(40)).
+prioridad(39,box(40)).
+fover(box(40), box(41)).
+fin(1,box(41)).
+prioridad(40,box(41)).
+fover(box(41), box(42)).
+fin(1,box(42)).
+prioridad(41,box(42)).
+fover(box(42), box(43)).
+fin(1,box(43)).
+prioridad(42,box(43)).
+fover(box(43), box(44)).
+fin(1,box(44)).
+prioridad(43,box(44)).
+fover(box(44), box(45)).
+fin(1,box(45)).
+prioridad(44,box(45)).
+fover(box(45), box(46)).
+fin(1,box(46)).
+prioridad(45,box(46)).
+fover(box(46), box(47)).
+fin(1,box(47)).
+prioridad(46,box(47)).
+fover(box(47), box(48)).
+fin(1,box(48)).
+prioridad(47,box(48)).
+fover(box(48), box(49)).
+fin(1,box(49)).
+prioridad(48,box(49)).
+fover(box(49), box(50)).
+fin(1,box(50)).
+prioridad(49,box(50)).
+
+#program final. 
+goal :- over(floor,free), over(floor,box(1)), over(box(1), box(2)), over(box(2), box(3)), over(box(3), box(4)), over(box(4), box(5)), over(box(5), box(6)), over(box(6), box(7)), over(box(7), box(8)), over(box(8), box(9)), over(box(9), box(10)), over(box(10), box(11)), over(box(11), box(12)), over(box(12), box(13)), over(box(13), box(14)), over(box(14), box(15)), over(box(15), box(16)), over(box(16), box(17)), over(box(17), box(18)), over(box(18), box(19)), over(box(19), box(20)), over(box(20), box(21)), over(box(21), box(22)), over(box(22), box(23)), over(box(23), box(24)), over(box(24), box(25)), over(box(25), box(26)), over(box(26), box(27)), over(box(27), box(28)), over(box(28), box(29)), over(box(29), box(30)), over(box(30), box(31)), over(box(31), box(32)), over(box(32), box(33)), over(box(33), box(34)), over(box(34), box(35)), over(box(35), box(36)), over(box(36), box(37)), over(box(37), box(38)), over(box(38), box(39)), over(box(39), box(40)), over(box(40), box(41)), over(box(41), box(42)), over(box(42), box(43)), over(box(43), box(44)), over(box(44), box(45)), over(box(45), box(46)), over(box(46), box(47)), over(box(47), box(48)), over(box(48), box(49)), over(box(49), box(50)), over(box(50), free) .
+:- not goal.
